@@ -1,0 +1,34 @@
+{
+  "configurration": {
+    "name": "Json_Log4j2_Config",
+    "packages": "com",
+    "properties": {
+      "property": {
+        "name": "log-path",
+        "value": "logs"
+      }
+    },
+    "appenders": {
+      "Console": {
+        "name": "Console_Appender",
+        "PatternLayout": {
+          "pattern": "%highlight{%msg} %xEx{short}%n"
+        }
+      }
+    },
+    "loggers": {
+      "root": {
+        "level": "all"
+      },
+      "logger": {
+        "name": "com",
+        "level": "all",
+        "AppenderRef": [
+          {
+            "ref": "Console_Appender"
+          }
+        ]
+      }
+    }
+  }
+}
